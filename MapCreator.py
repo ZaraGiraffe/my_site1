@@ -11,6 +11,9 @@ templ_loc = "https://api.twitter.com/2/users?ids={}&user.fields=location"
 
 
 def get_ids(name):
+    """
+    get ids of the following accounts of the user
+    """
     string = templ_ids.format(name)
     get = requests.get(string, headers={"authorization": TOKEN})
     dct = json.loads(get.text)
@@ -18,6 +21,9 @@ def get_ids(name):
 
 
 def location(ID):
+    """
+    gets location of the user by id
+    """
     string = templ_loc.format(ID)
     get = requests.get(string, headers={"authorization": TOKEN})
     dct = json.loads(get.text)
@@ -25,6 +31,9 @@ def location(ID):
 
 
 def create_map(name):
+    """
+    creates a map
+    """
     data = []
     try:
         try:
