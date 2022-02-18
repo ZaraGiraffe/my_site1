@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>enter username</h1>
+    <form action="/start" method="post">
+        <input autocomplete="off" name="username" placeholder="username" type="text">
+    </form>
+    Enter the username, press enter and wait a while
+{% endblock %}
